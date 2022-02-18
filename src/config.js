@@ -7,7 +7,7 @@ const args = yargs(process.argv.slice(2));
 const processedArgs = args.options({
   port: {
     alias: "p",
-    default: 8080,
+    default: process.env.PORT,
     describe: "Port to listen",
     type: "number",
   },
