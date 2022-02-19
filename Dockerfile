@@ -1,9 +1,8 @@
-FROM node:14
+FROM node:17.3.0
 
-RUN mkdir -p /app
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
+RUN mkdir -p /src/app
+WORKDIR /src/app
 COPY . .
+RUN npm install
 EXPOSE 8080
-CMD ["npm", "start"]
+CMD ["node", "src/main.js"]
