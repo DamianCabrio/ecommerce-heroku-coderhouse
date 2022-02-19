@@ -1,4 +1,4 @@
-# Servidor con balance de carga
+# Desplegar nuestro proyecto en la nube 
 ### DAMIÁN CABRIO
 
 ## Correr el proyecto localmente
@@ -9,16 +9,7 @@ El proyecto se puede correr en dos modos: Modo fork y modo cluster. Por defecto 
 También se debe generar y popular un archivo .env, basándose en el archivo .env.example.
 Las variables que se deben agregar al archivo .env son: `SESSION_SECRET`, `MONGODB_URL`, `FB_CLIENT_ID`, `FB_CLIENT_SECRET` y `FB_CALLBACK_URL`.
 
-## Compresión gzip
-Sé probo la ruta `/info` con y sin compresión, y estos fueron los resultados:
-### Sin compresión
-<img src='./imagenes/no-comprimido.png'>
-
-### Con compresión
-<img src='./imagenes/comprimido.png'>
-
-## Logger
-Se decidió emplear la biblioteca log4js para loguear la aplicación. El archivo de configuración se encuentra en `/src/services/logging.js` y los logs generados se pueden ver o por consola, o en el caso de los logs de nivel error y warning en la carpeta `logs`.
-
-## Resultados de profiling
-Los resultados del profiling de las rutas `/info` y `/api/random` realizados con node profiler y artillery se pueden encontrar en la carpeta `profiling`.
+## Heroku
+La aplicación fue desplegada en Heroku como una imagen de Docker, en dos entornos:
+Staging: [Link](https://ecommerce-coderhouse-staging.herokuapp.com)
+Producción: [Link](https://ecommerce-coderhouse-cabrio.herokuapp.com)
